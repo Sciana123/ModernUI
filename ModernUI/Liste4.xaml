@@ -1,0 +1,370 @@
+﻿<Window x:Class="ModernUI.Liste4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModernUI"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Liste3"
+        Height="800" Width="1300"
+        WindowStyle="None"
+        ResizeMode="NoResize"             
+        AllowsTransparency="True"       
+        Background="Transparent"
+        MouseDown="Window_MouseDown">
+    <Grid>
+
+        <Border CornerRadius="10">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#181735" Offset="0.0"/>
+                    <GradientStop Color="#FE6584" Offset=" 1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+
+
+        </Border>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Numero de cours"
+                       Foreground="White"                       
+                       Grid.Column="1" 
+                       HorizontalAlignment="Left" 
+                       Margin="0,15,0,0"
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="20"
+                       FontWeight="Medium"
+                       Grid.Row="3" 
+                       VerticalAlignment="Top" 
+                       Height="28" Width="307" Grid.ColumnSpan="2"/>
+
+            <Button Name="close" 
+                    Click="close_Click"
+                    Margin="127,0,30,0" 
+                    Grid.Column="5" 
+                    Grid.Row="1" 
+                    Height="45" 
+                    Width="55" 
+                    VerticalAlignment="Top">
+                <Button.Background>
+                    <ImageBrush ImageSource="close.png"/>
+                </Button.Background>
+
+            </Button>
+            <Button Name="back"
+                    Click="back_Click"
+                    Grid.Column="5" 
+                    HorizontalAlignment="Left" 
+                    Margin="67,0,0,24" 
+                    VerticalAlignment="Bottom" 
+                    Height="45" 
+                    Width="55" 
+                    Grid.Row="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="back.png"/>
+                </Button.Background>
+            </Button>
+
+            <ComboBox Grid.Column="1"
+                      x:Name="cours"                       
+                      HorizontalAlignment="Left" Margin="211,18,0,0"
+                      Grid.Row="3" 
+                      VerticalAlignment="Top" 
+                      Width="268" Height="37" Grid.ColumnSpan="2"/>
+
+            <TextBlock Text="Numero de groupe"                        
+                       Grid.Column="1" HorizontalAlignment="Left" 
+                       Foreground="White"                    
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="20"
+                       FontWeight="Medium"
+                       Grid.Row="4" 
+                       VerticalAlignment="Top" 
+                       Height="34" Width="182" Margin="0,15,0,0"/>
+
+            <TextBox Grid.Column="1" 
+                     x:Name="groupe"
+                     HorizontalAlignment="Left" 
+                     Margin="211,10,0,0" 
+                     Grid.Row="4" 
+                     VerticalAlignment="Top" 
+                     Width="269"
+                     Height="34" 
+                     Grid.ColumnSpan="2"/>
+
+            <TextBlock Text="Date de debut" 
+                       Grid.Column="1" HorizontalAlignment="Left" 
+                       Foreground="White"                       
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="20"
+                       FontWeight="Medium"
+                       Grid.Row="5" 
+                       VerticalAlignment="Top" 
+                       Height="34" Width="134"
+                       Margin="0,14,0,0"/>
+
+            <DatePicker Grid.Column="1"                        
+                        x:Name="start"
+                        HorizontalAlignment="Left" 
+                        Margin="211,16,0,0" 
+                        Grid.Row="5" 
+                        VerticalAlignment="Top" 
+                        Width="269" 
+                        Grid.ColumnSpan="2" 
+                        Height="34" DisplayDate="2022-02-17"/>
+
+
+            <TextBlock Text="Date de fin" 
+                       Grid.Column="1" HorizontalAlignment="Left" 
+                       Foreground="White"                       
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="20"
+                       FontWeight="Medium"
+                       Grid.Row="6" 
+                       VerticalAlignment="Top" 
+                       Height="34" Width="134"
+                       Margin="0,14,0,0"/>
+
+            <DatePicker Grid.Column="1"
+  
+                        x:Name="end"
+                        HorizontalAlignment="Left" 
+                        Margin="211,1,0,0" 
+                        Grid.Row="6" 
+                        VerticalAlignment="Top" 
+                        Width="269" 
+                        Grid.ColumnSpan="2" 
+                        Height="34" DisplayDate="2022-02-17"/>
+
+            <TextBlock Text="Temps rencontre" 
+                       Grid.Column="3" HorizontalAlignment="Left"                    
+                       FontFamily="Dosis"
+                       FontSize="26"
+                       FontWeight="Bold"
+                       Grid.Row="2" 
+                       VerticalAlignment="Center" 
+                       Height="34" Width="224"
+                       Margin="104,0,0,0" Grid.ColumnSpan="2" Foreground="#FFF5F0F0"/>
+
+            <TextBlock Text="Jours"                      
+                       Grid.Column="3"
+                       Foreground="White"
+                       HorizontalAlignment="Center" 
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="20"
+                       FontWeight="Medium"
+                       Margin="0,18,0,0" 
+                       Grid.Row="3"                        
+                       VerticalAlignment="Top" RenderTransformOrigin="-0.573,0.59"/>
+
+            <TextBlock Text="Heures/Jour"
+                       Grid.Column="3"
+                       Foreground="White"
+                       HorizontalAlignment="Left" 
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="20"
+                       FontWeight="Medium"
+                       Margin="104,24,0,0" 
+                       Grid.Row="4"                        
+                       VerticalAlignment="Top" RenderTransformOrigin="-0.896,0.84"/>
+
+            <ComboBox x:Name="day"                   
+                      ItemsSource="{Binding names}"
+                      Grid.Column="4" 
+                      HorizontalAlignment="Left" Margin="0,20,0,0"
+                      Grid.Row="3" 
+                      VerticalAlignment="Top" 
+                      Width="290" Height="37" 
+                      Grid.ColumnSpan="2"/>
+
+            <ComboBox Grid.Column="4"
+                      x:Name="time"
+                      ItemsSource="{Binding meet}"
+                      HorizontalAlignment="Left" Margin="1,0,0,0"
+                      Grid.Row="4" 
+                      VerticalAlignment="Center" 
+                      Width="289" Height="37" 
+                      Grid.ColumnSpan="2"/>
+
+            <TextBlock Grid.Column="3"     
+                       Foreground="White"
+                       HorizontalAlignment="Left" 
+                       FontFamily="Fonts/#Dosis"
+                       FontSize="20"
+                       FontWeight="Medium"                
+                       Grid.Row="5" 
+                       Text="Heures Totale" 
+                       VerticalAlignment="Top" Margin="104,21,0,0" />
+
+            <ComboBox Grid.Column="4" 
+                      x:Name="totalhours"
+                      ItemsSource="{Binding hours}"
+                      HorizontalAlignment="Left"
+                      Margin="0,20,0,0" 
+                      Grid.Row="5" 
+                      VerticalAlignment="Top"
+                      Width="290" Grid.ColumnSpan="2" 
+                      Height="35"/>
+
+
+            <Button Grid.Column="4"
+                    Click="Button_Click"
+                    Content="Créer" 
+                    x:Name="AddNewData"
+                     FontFamily="Fonts/#Dosis"
+                     FontSize="20"
+                     FontWeight="Medium"
+                    HorizontalAlignment="Center" 
+                    Margin="0,20,0,0" 
+                    Grid.Row="6" 
+                    VerticalAlignment="Top" 
+                    Width="144" Height="38" RenderTransformOrigin="1.92,0.28">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF1F2B5B" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <Button Content="Ajouter" 
+                    Grid.Column="3"
+                    x:Name="AddGrid"
+                    Click="AddGrid_Click"
+                    FontFamily="Fonts/#Dosis"
+                     FontSize="20"
+                     FontWeight="Medium"
+                    HorizontalAlignment="Left" 
+                    Margin="108,20,0,0" 
+                    Grid.Row="6" 
+                    VerticalAlignment="Top" 
+                    Width="144" Height="38"
+                    RenderTransformOrigin="0.73,0.506">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF1F2B5B" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <DataGrid x:Name="CreateDG"                     
+                      AlternatingRowBackground="Bisque"                                            
+                      HorizontalAlignment="Left" 
+                      VerticalAlignment="Top"
+                      Height="293"  
+                      Grid.Row="7" Width="1251" 
+                      Margin="19,17,0,0" Grid.ColumnSpan="6" Grid.RowSpan="5">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Groupe"
+                                        Binding="{Binding itgroupe}"
+                                        Width="55"/>
+                    <DataGridTextColumn Header="Cours"
+                                        Binding="{Binding itcours}"
+                                        Width="60"/>
+                    <DataGridTextColumn Header="Enseignant"
+                                        Width="30"/>
+                    <DataGridTextColumn Header="Numero prog."
+                                        Width="20"/>
+                    <DataGridTextColumn Header="SPE"
+                                        Width="20"/>
+                    <DataGridTextColumn Header="Nb minimum"
+                                        Width="20"/>
+                    <DataGridTextColumn Header="Nb acceptable"
+                                        Width="20"/>
+                    <DataGridTextColumn Header="Nb limite"
+                                        Width="20"/>
+                    <DataGridTextColumn Header="Nb max"
+                                        Width="20"/>
+                    <DataGridTextColumn Header="Date de debut"
+                                        Binding="{Binding itdebut, StringFormat = yyyy/MM/dd}"
+                                        Width="85"/>
+                    <DataGridTextColumn Header="Date de fin"
+                                        Binding="{Binding itend, StringFormat = yyyy/MM/dd}"
+                                        Width="75"/>
+                    <DataGridTextColumn Header="Code de frais sess."
+                                        Width="20"/>
+                    <DataGridTextColumn Header="Source de fin"
+                                        Binding="{Binding sourcefin}"
+                                        Width="120"/>
+                    <DataGridTextColumn Header="Groupe a l'evaluation"
+                                        Width="20"/>
+                    <DataGridTextColumn Header="Groupe de base"
+                                        Width="20"/>
+                    <DataGridTextColumn Header="No modele"
+                                        Width="20"/>
+                    <DataGridTextColumn Header="Commentaire conception horaire"
+                                        Width="20"/>
+                    <DataGridTextColumn Header="Type recensement"
+                                        Width="20"/>
+                    <DataGridTextColumn Header="Date declaration frequentation"
+                                        Binding="{Binding itdebut, StringFormat = yyyy/MM/dd}"
+                                        Width="90"/>
+                    <DataGridTextColumn Header="Date fin recensement"
+                                        Binding="{Binding itend, StringFormat = yyyy/MM/dd}"
+                                        Width="90"/>
+                    <DataGridTextColumn Header="Date debut recensement"
+                                        Binding="{Binding itrecense, StringFormat = yyyy/MM/dd}"
+                                        Width="90"/>
+                    <DataGridTextColumn Header="Date limite annulation cours"
+                                        Binding="{Binding itcancel, StringFormat = yyyy/MM/dd}"
+                                        Width="90"/>
+                    <DataGridTextColumn Header="Date limite remise notes finales"
+                                        Binding="{Binding notefin, StringFormat = yyyy/MM/dd}"
+                                        Width="90"/>
+                    <DataGridTextColumn Header="Type local theorie"
+                                        Width="20"/>
+                    <DataGridTextColumn Header="Type local lab."
+                                        Width="20"/>
+                    <DataGridTextColumn Header="Type local stage"
+                                        Width="20"/>
+                    <DataGridTextColumn Header="Titre publie"
+                                        Width="20"/>
+
+                </DataGrid.Columns>
+
+
+            </DataGrid>
+
+
+
+
+
+
+
+
+
+
+
+        </Grid>
+
+    </Grid>
+</Window>

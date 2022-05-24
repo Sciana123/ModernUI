@@ -1,0 +1,64 @@
+﻿<Window x:Class="ModernUI.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModernUI"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"             
+        AllowsTransparency="True"
+        Title="Menu" Height="800" Width="1000">
+    <Window.Background>
+        <ImageBrush ImageSource="img4.png" Stretch="Uniform"/>
+    </Window.Background>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="img4.png"/>
+        </Grid.Background>
+
+        <StackPanel>
+            <Menu FontSize="18" Background="#181735" Foreground="White">
+                <MenuItem Header="Fichier" Width="80">
+                    <MenuItem Header="Quitter" 
+                              x:Name="quitter"
+                              Click="quitter_Click"
+                              Background="#181735"/>
+                </MenuItem>
+                <MenuItem Header="Edition" Width="80">
+                    <MenuItem Header="Copier" Background="#181735"/>
+                    <MenuItem Header="Coller" Background="#181735"/>
+                </MenuItem>
+                <MenuItem Header="Rapports" Width="80">
+                    <MenuItem Header="Liste des pourcentages d'échecs par cours"
+                              x:Name="Liste1"
+                              Click="Liste1_Click" 
+                              Background="#181735"/>
+
+                    <MenuItem Header="Liste des étudiants sans adresse" 
+                              x:Name="Liste2"
+                              Click="Liste2_Click"
+                              Background="#181735"/>
+
+                    <MenuItem Header="Liste des étudiants sans NAS"
+                               x:Name="Liste3"
+                              Click="Liste3_Click"
+                              Background="#181735"/>
+
+                    <MenuItem Header="Generate CSV"
+                               x:Name="Liste4"
+                              Click="Liste4_Click"
+                              Background="#181735"/>
+                </MenuItem>
+            </Menu>
+
+        </StackPanel>
+
+    </Grid>
+
+
+
+
+</Window>
